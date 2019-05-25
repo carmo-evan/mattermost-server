@@ -2471,7 +2471,7 @@ func (c *Client4) DoPostAction(postId, actionId string) (bool, *Response) {
 }
 
 // DoPostActionWithCookie performs a post action with extra arguments
-func (c *Client4) DoPostActionWithCookie(postId, actionId, selected, cookieStr string) (bool, *Response) {
+func (c *Client4) DoPostActionWithCookie(postId, actionId, selected, cookieStr, teamId string) (bool, *Response) {
 	var body []byte
 	if selected != "" || cookieStr != "" {
 		body, _ = json.Marshal(DoPostActionRequest{

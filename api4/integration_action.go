@@ -56,7 +56,7 @@ func doPostAction(c *Context, w http.ResponseWriter, r *http.Request) {
 	resp := &model.PostActionAPIResponse{Status: "OK"}
 
 	resp.TriggerId, appErr = c.App.DoPostActionWithCookie(c.Params.PostId, c.Params.ActionId, c.App.Session.UserId,
-		actionRequest.SelectedOption, cookie)
+		actionRequest.TeamId, actionRequest.SelectedOption, cookie)
 	if appErr != nil {
 		c.Err = appErr
 		return
