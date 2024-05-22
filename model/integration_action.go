@@ -31,6 +31,7 @@ var PostActionRetainPropKeys = []string{"from_webhook", "override_username", "ov
 type DoPostActionRequest struct {
 	SelectedOption string `json:"selected_option,omitempty"`
 	Cookie         string `json:"cookie,omitempty"`
+	TeamId         string `json:"teamId,omitempty"`
 }
 
 type PostAction struct {
